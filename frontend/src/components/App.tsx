@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import MineField from "./MineField";
+import MineCell from "./MineCell";
+
 
 const App = () => {
+
+  const cells = [...Array(25).keys()].map(item => <MineCell index={item}/>);
+
   return (
-    <div>
-      Hello world!
-    </div>
+    <MineField>
+      {cells}
+    </MineField>
   );
 };
 
